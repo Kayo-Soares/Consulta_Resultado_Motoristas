@@ -314,7 +314,7 @@ if uploaded:
         st.dataframe(
             df_display.style
             .apply(color_row, axis=1)
-            .applymap(color_bool, subset=bool_cols_list),
+            .map(color_bool, subset=bool_cols_list),
             use_container_width=True, height=560
         )
 
@@ -383,8 +383,8 @@ if uploaded:
 
         st.dataframe(
             df_pts_display.style
-            .applymap(color_pts_bool, subset=["ELEGÍVEL"])
-            .applymap(color_total,    subset=["TOTAL PONTOS"]),
+            .map(color_pts_bool, subset=["ELEGÍVEL"])
+            .map(color_total,    subset=["TOTAL PONTOS"]),
             use_container_width=True, height=560
         )
 
